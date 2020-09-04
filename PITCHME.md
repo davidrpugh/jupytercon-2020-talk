@@ -26,7 +26,7 @@ dependencies:
   - jupyterlab-git # extensions available via conda listed here
   - pip
   - pip:
-    - -r file:requirements.txt # put any pip installed packages or extensions in here
+    - -r file:requirements.txt # extensions available via pip go here
   - python
 ```
 
