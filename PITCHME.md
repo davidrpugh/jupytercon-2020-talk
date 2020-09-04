@@ -42,6 +42,24 @@ Allows you to launch Jupyter Notebooks and Python consoles for each Conda enviro
 
 ---
 
+```yaml
+dependencies:
+  ...
+  - ipykernel
+  - ipython
+  ...
+```
+
+Next, rebuild the Conda environment using the following command.
+
+```bash
+# re-create the env and then create the custom kernel for the active env
+conda env create --prefix $PWD/env --file environment.yml --force
+conda activate $PWD/env
+python -m ipykernel install --user --name internal-use-only --display-name "What you see in JupyerLab"
+```
+---
+
 #### %conda and %pip magic commands
 
 ---
