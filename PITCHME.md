@@ -29,18 +29,22 @@ dependencies:
     - -r file:requirements.txt # extensions available via pip go here
   - python
 ```
+---
+
+#### Use the following command to create env using Conda
 
 ```bash
-# use the following command to create env using conda
 conda env create --prefix $PWD/env --file environment.yml --force
 ```
 ---
 
 #### Custom kernels for your project's Conda environment
 
-Allows you to launch Jupyter Notebooks and Python consoles for each Conda environment within a common JupyterLab install
+A custom kernel for your Conda environment allows you to launch Jupyter Notebooks and IPython consoles for that Conda environment within a common JupyterLab installation.
 
 ---
+
+#### First, add a couple of dependencies to your project;
 
 ```yaml
 dependencies:
@@ -49,14 +53,23 @@ dependencies:
   - ipython
   ...
 ```
+---
 
-Next, rebuild the Conda environment using the following command.
+#### next, rebuild the Conda environment;
 
 ```bash
-# re-create the env and then create the custom kernel for the active env
 conda env create --prefix $PWD/env --file environment.yml --force
+```
+---
+
+### finally, activate the env and create the kernel!
+
+```bash
 conda activate $PWD/env
-python -m ipykernel install --user --name internal-use-only --display-name "What you see in JupyerLab"
+python -m ipykernel install \
+    --user \
+    --name name-for-internal-use-only \
+    --display-name "Name you see in JupyerLab"
 ```
 ---
 
