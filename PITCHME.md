@@ -4,7 +4,7 @@
 
 ### System-wide Jupyter install
 
-"System-wide" Jupyter install: Conda (+Pip) manage a Jupyter installation shared across all projects.
+Conda (+Pip) manage a Jupyter installation shared across all projects.
 
 * Common set of JupyterLab extensions simplifies user interface (UI) and user experience (UX).
 * No need to frequently re-build JupyterLab
@@ -105,7 +105,7 @@ Built-in IPython magic commands for installing packages via *into the active ker
 
 ### Project-based Jupyter install
 
-"Project-specific" Jupyter install: Conda (+Pip) manage separate Jupyter installations for each project.
+Conda (+Pip) manage separate Jupyter installations for each project.
 
 * More flexible UI/UX as JupyterLab extensions can customized for each project
 * Ability to have different versions of JupyterLab installed on the same machine allows for experimentation with bleeding edge features
