@@ -8,7 +8,7 @@ Conda (+Pip) manage a Jupyter installation shared across all projects.
 
 * Common set of JupyterLab extensions simplifies user interface (UI) and user experience (UX).
 * No need to frequently re-build JupyterLab
-* Allows for quicker start of new projects as no need to install (and build!) Jupyter.
+* Allows for quicker start of new projects as no need to install (and build!) JupyterLab.
 
 ---
 
