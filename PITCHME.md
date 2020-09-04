@@ -73,7 +73,19 @@ python -m ipykernel install \
 ```
 ---
 
-#### %conda and %pip magic commands
+#### Example
+
+INSERT SCREENSHOT FROM JUPYTERLAB HERE!
+
+---
+
+#### `%conda` and `%pip` magic commands
+
+There are two built-in IPython magic commands for installing packages via either Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip) into the active kernel.
+
+* Both commands can be used from within Jupyter Notebooks or IPython consoles. 
+* Both `%conda` and `%pip` are mostly useful for proto-typing new projects.
+* For "production", prefer adding packages to `environment.yml`/`requirements.txt` (and re-creating environment).
 
 ---
 
