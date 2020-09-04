@@ -12,7 +12,7 @@
 
 ---
 
-### `environment.yml`
+#### System-wide `environment.yml`
 
 ```yaml
 name: jupyter-base-env
@@ -31,6 +31,7 @@ dependencies:
 ```
 
 ```bash
+# use the following command to create env using conda
 conda env create --prefix $PWD/env --file environment.yml --force
 ```
 ---
