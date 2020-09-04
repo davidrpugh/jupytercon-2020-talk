@@ -12,6 +12,8 @@
 
 ---
 
+### `environment.yml`
+
 ```yaml
 name: jupyter-base-env
 
@@ -21,11 +23,15 @@ channels:
   
 dependencies:
   - jupyterlab
-  - jupyterlab-git
+  - jupyterlab-git # extensions available via conda listed here
   - pip
   - pip:
-    - -r file:requirements.txt # put any pip installed packages here
-  - python>=3.7
+    - -r file:requirements.txt # put any pip installed packages or extensions in here
+  - python
+```
+
+```bash
+conda env create --prefix $PWD/env --file environment.yml --force
 ```
 ---
 
