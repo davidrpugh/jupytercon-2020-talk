@@ -12,6 +12,23 @@
 
 ---
 
+```yaml
+name: jupyter-base-env
+
+channels:
+  - conda-forge
+  - defaults
+  
+dependencies:
+  - jupyterlab
+  - jupyterlab-git
+  - pip
+  - pip:
+    - -r file:requirements.txt # put any pip installed packages here
+  - python>=3.7
+```
+---
+
 #### Custom kernels for your project's Conda environment
 
 Allows you to launch Jupyter Notebooks and Python consoles for each Conda environment within a common JupyterLab install
