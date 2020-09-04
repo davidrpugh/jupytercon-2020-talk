@@ -44,7 +44,7 @@ A custom kernel for your Conda environment allows you to launch Jupyter Notebook
 
 ---
 
-#### First, add a couple of dependencies to your project;
+#### First, add dependencies to your project;
 
 ```yaml
 dependencies:
@@ -62,7 +62,7 @@ conda env create --prefix $PWD/env --file environment.yml --force
 ```
 ---
 
-### finally, activate the env and create the kernel!
+#### finally, activate the env and create the kernel!
 
 ```bash
 conda activate $PWD/env
