@@ -34,7 +34,7 @@ dependencies:
 
 #### Create `jupyter-base-env` using Conda
 
-Put the following commands inside a Bash script `create-jupyter-env.sh` to automate the process of environment creation (including JupyterLab re-build).
+Put the following commands inside a Bash script `create-jupyter-env.sh` to automate the process of environment creation (including JupyterLab re-build). See [template repo](INSERT LINK TO GITHUB REPO HERE!) for details.
 
 ```bash
 #!/bin/bash --login
