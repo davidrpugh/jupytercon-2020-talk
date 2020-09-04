@@ -1,4 +1,4 @@
-# Let's Get **Started**
+# Best practices for managing Jupyter-based data science projects using Conda (+Pip)
 
 ---
 
