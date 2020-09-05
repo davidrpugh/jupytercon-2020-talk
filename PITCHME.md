@@ -112,9 +112,43 @@ Built-in IPython magic commands for installing packages via *into the active ker
 
 Conda (+Pip) manage separate Jupyter installations for each project.
 
-* More flexible UI/UX as JupyterLab extensions can customized for each project
-* Ability to have different versions of JupyterLab installed on the same machine allows for experimentation with bleeding edge features
-* Automatically makes a data science project "binder-ready". 
+* More flexible UI/UX as JupyterLab version and extensions can customized for each project.
+* Easier experimentation with bleeding edge features of JupyterLab.
+* Automatically makes a data science project repo "Binder-ready". 
+
+---
+
+#### Typical Conda `environment.yml` for a "project-based" install
+
+```yaml
+name: null
+
+channels:
+  - conda-forge
+  - defaults
+  
+dependencies:
+  - jupyterlab
+  - jupyterlab-git # extensions available via conda go here
+  - pip
+  - pip:
+    - -r file:requirements.txt # packages available via pip go here
+  - python
+```
+---
+
+#### Create project environment using Conda
+
+Put the following commands inside a Bash script `create-conda-env.sh` to automate the process of environment creation (including JupyterLab re-build).
+
+```bash
+#!/bin/bash --login
+
+ENV_PREFIX=$PROJECT_DIR/env # env directory included in Python .gitignore
+conda env create --prefix $ENV_PREFIX jupyter-base-env --file environment.yml --force
+conda activate $ENV_PREFIX
+source postBuild # put jupyter labextension install commands here
+```
 
 ---
 
@@ -127,9 +161,7 @@ INSERT LINKS TO EXAMPLE REPOS HERE!
 
 ---
 
-#### Template for a project-based Jupyter install
-
-INSERT LINK TO TEMPLATE REPO HERE!
+#### System-wide or project-based: which to choose?
 
 ---
 
