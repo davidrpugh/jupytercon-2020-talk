@@ -167,12 +167,18 @@ INSERT LINKS TO EXAMPLE REPOS HERE!
 
 ### Where to find me?
 
-Dr. David R. Pugh
+#### Dr. David R. Pugh
 Staff Scientist, KAUST Visualization Core Lab
 Certified Instructor, The Carpentries
 
-@snap[south-west text-08] @fatwitter @snapend
+@snap[south-west text-08]
+@fa[twitter](TheSandyCoder)
+@snapend
 
-@snap[south text-08] @fagithub @snapend
+@snap[south text-08]
+@fa[github](davidrpugh)
+@snapend
 
-@snap[south-east text-08] @falinkedin @snapend
+@snap[south-east text-08]
+@fa[linkedin](davidrpugh)
+@snapend
