@@ -15,9 +15,11 @@ Certified Instructor, The Carpentries
 
 Conda (+Pip) manage a JupyterLab installation shared across all projects.
 
+@ul[spaced]
 * Common set of JupyterLab extensions simplifies user interface (UI) and user experience (UX).
 * No need to frequently re-build JupyterLab
 * Allows for quicker start of new projects as no need to install (and build!) JupyterLab.
+@ulend
 
 ---
 
@@ -59,9 +61,11 @@ source postBuild # put jupyter labextension install commands here
 
 The `jupyterlab-base-env` should *only* contain JupyterLab (+dependencies) and required extensions.
 
+@ul[spaced]
 * Automate the process of building `jupyterlab-base-env` with Bash script.
 * Each of your projects should have separate Conda environment.
 * Create custom kernel for each project's Conda environment.
+@ulend
 
 ---
 
@@ -111,9 +115,11 @@ INSERT SCREENSHOT FROM JUPYTERLAB HERE!
 
 Built-in IPython magic commands for installing packages via *into the active kernel* Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
 
+@ul[spaced]
 * Both commands can be used from within Jupyter Notebooks or IPython consoles. 
 * Both `%conda` and `%pip` are mostly useful for proto-typing new projects.
 * For "production", prefer adding new packages to `environment.yml`/`requirements.txt` (and re-creating environment).
+@ulend
 
 ---
 
@@ -121,9 +127,11 @@ Built-in IPython magic commands for installing packages via *into the active ker
 
 Conda (+Pip) manage separate JupyterLab installations for each project.
 
+@ul[spaced]
 * More flexible UI/UX as JupyterLab version and extensions can customized for each project.
 * Easier experimentation with bleeding edge features of JupyterLab.
 * Automatically makes a data science project repo "Binder-ready". 
+@ulend
 
 ---
 
