@@ -192,7 +192,7 @@ dependencies:
 ```bash
 #!/bin/bash --login
 
-ENV_PREFIX=$PROJECT_DIR/env # env directory included in Python .gitignore
+ENV_PREFIX=$PROJECT_DIR/env # directory included in Python .gitignore
 conda env create \
     --prefix $ENV_PREFIX 
     --file environment.yml \
