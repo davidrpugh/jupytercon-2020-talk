@@ -1,7 +1,9 @@
 ### Best practices for managing Jupyter-based data science projects using Conda (+Pip)
 
+JupyterCon 2020
 
-@snap[south]
+---
+
 #### Dr. David R. Pugh
 Staff Scientist, KAUST Visualization Core Lab
 Certified Instructor, The Carpentries
