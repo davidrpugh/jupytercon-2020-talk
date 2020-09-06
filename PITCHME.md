@@ -1,4 +1,6 @@
+@snap[north]
 #### Best practices for managing Jupyter-based data science projects using Conda (+Pip)
+@snapend
 
 #### Dr. David R. Pugh
 Staff Scientist, KAUST Visualization Core Lab
