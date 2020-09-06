@@ -1,6 +1,6 @@
 ### Best practices for managing JupyterLab-based data science projects using Conda (+Pip)
 
-@snap[south]
+@snap[south span-100]
 JupyterCon 2020, 12-16 October
 @snapend
 
