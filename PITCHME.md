@@ -19,9 +19,10 @@ Certified Instructor, [The Carpentries](https://carpentries.org/)
 @snapend
 
 @ul[spaced]
-* System-wide JupyterLab installation
-* Project-based JupyterLab installation
-* Discuss the tradeoffs
+* "System-wide" JupyterLab installation
+* "Project-based" JupyterLab installation
+* Provide examples of both approaches
+* Discuss the relevant tradeoffs
 @ulend
 
 ---
