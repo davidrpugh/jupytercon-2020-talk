@@ -158,7 +158,7 @@ Conda (+pip) manage separate JupyterLab installations for each project.
 @ul[spaced]
 * More flexible UI/UX as JupyterLab version and extensions can customized for each project.
 * Easier experimentation with bleeding edge features of JupyterLab.
-* Automatically makes a data science project repo "Binder-ready". 
+* Automatically makes a data science project repo ["Binder-ready"](https://mybinder.org/). 
 @ulend
 @snapend
 
