@@ -158,7 +158,7 @@ Built-in IPython magic commands for installing packages into the *active* kernel
 @ul[spaced]
 * Both commands can be used from within Jupyter Notebooks or IPython consoles. 
 * Both `%conda` and `%pip` are mostly useful for proto-typing new projects.
-* For "production", prefer adding new packages to `environment.yml`/`requirements.txt` (and re-creating environment).
+* For "production", prefer adding new packages to `environment.yml`/`requirements.txt` (and rebuilding environment).
 @ulend
 @snapend
 
