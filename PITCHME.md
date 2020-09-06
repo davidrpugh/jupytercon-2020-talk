@@ -4,7 +4,7 @@ JupyterCon 2020
 
 ---
 
-![width=100](assets/img/headshot.png)
+![width=250](assets/img/headshot.png)
 
 #### Dr. David R. Pugh
 Staff Scientist, KAUST Visualization Core Lab
