@@ -49,7 +49,6 @@ dependencies:
   - pip:
     - -r file:requirements.txt # extensions available via pip go here
   - python
-  - xeus-python # alt kernel with nice support for debugging
 ```
 
 ---
@@ -74,7 +73,7 @@ Environment should *only* contain JupyterLab and required extensions (+deps).
 @ul[spaced]
 * Automate environment build with Bash script.
 * Each of your projects should have separate Conda environment.
-* Create custom kernels for project Conda environments.
+* Create custom Jupyter kernels for project Conda environments.
 @ulend
 
 ---
@@ -86,7 +85,10 @@ Environment should *only* contain JupyterLab and required extensions (+deps).
 ```bash
 #!/bin/bash --login
 
-conda env create --name jupyterlab-base-env --file environment.yml --force
+conda env create \
+    --name jupyterlab-base-env \
+    --file environment.yml \
+    --force
 conda activate jupyterlab-base-env
 source postBuild # put jupyter labextension install commands here
 ```
@@ -94,10 +96,12 @@ source postBuild # put jupyter labextension install commands here
 ---
 
 @snap[north-west]
-#### Create custom kernels for project Conda environments
+#### Creating Jupyter kernels for Conda environments
 @snapend
 
-Custom kernel for a project's Conda environment allows you to launch Jupyter Notebooks and IPython consoles for that Conda environment within a common JupyterLab installation.
+@snap[west]
+Custom Jupyter kernel for a Conda environment allows you to launch Jupyter Notebooks and IPython consoles for that Conda environment within a common JupyterLab installation.
+@snapend
 
 @ul[spaced]
 * Automate process for all envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
