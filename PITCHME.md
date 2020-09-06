@@ -10,13 +10,13 @@ Certified Instructor, The Carpentries
 
 ---
 
-@snap[north-east]
+@snap[north-west]
 ### Outline
 @snap[end]
 
 ---
 
-@snap[north-east]
+@snap[north-west]
 ### System-wide JupyterLab install
 @snapend
 
@@ -30,8 +30,8 @@ Conda (+Pip) manage a JupyterLab installation shared across all projects.
 
 ---
 
-@snap[north-east]
-#### Typical `environment.yml` for a "system-wide" install
+@snap[north-west]
+#### `environment.yml` for a "system-wide" install
 @snapend
 
 ```yaml
@@ -53,10 +53,24 @@ dependencies:
 ---
 
 @snap[north-east]
-#### Create `jupyterlab-base-env` using Conda
+#### Keep your `jupyterlab-base-env` *lean*
 @snapend
 
-Create a Bash script `create-jupyterlab-env.sh` to automate environment creation (including JupyterLab re-build). Full example available on [GitHub](INSERT LINK TO GITHUB REPO HERE!).
+Environment should *only* contain JupyterLab and required extensions.
+
+@ul[spaced]
+* Automate the process of building `jupyterlab-base-env` with Bash script.
+* Each of your projects should have separate Conda environment.
+* Create custom kernel for each project's Conda environment.
+@ulend
+
+---
+
+@snap[north-west]
+#### Automate building `jupyterlab-base-env` with Bash script
+@snapend
+
+Full example available on [GitHub](INSERT LINK TO GITHUB REPO HERE!).
 
 ```bash
 #!/bin/bash --login
@@ -68,33 +82,26 @@ source postBuild # put jupyter labextension install commands here
 
 ---
 
-@snap[north-east]
-#### Keep your `jupyterlab-base-env` *lean*
-@snapend
-
-The `jupyterlab-base-env` should *only* contain JupyterLab and required extensions.
-
-@ul[spaced]
-* Automate the process of building `jupyterlab-base-env` with Bash script.
-* Each of your projects should have separate Conda environment.
-* Create custom kernel for each project's Conda environment.
-@ulend
-
----
-
-@snap[north-east]
-#### Create custom kernel for each project's Conda environment
+@snap[north-west]
+#### Create custom kernels for project Conda environments
 @snapend
 
 Custom kernel for a project's Conda environment allows you to launch Jupyter Notebooks and IPython consoles for that Conda environment within a common JupyterLab installation.
 
 ---
 
-@snap[north-east]
+@snap[north-west]
 #### First, add dependencies to your project;
 @snapend
 
 ```yaml
+name: null
+
+channels:
+  ...
+  - conda-forge
+  - defaults
+  
 dependencies:
   ...
   - ipykernel
@@ -103,17 +110,20 @@ dependencies:
 ```
 ---
 
-@snap[north-east]
+@snap[north-west]
 #### next, rebuild the Conda environment;
 @snapend
 
 ```bash
 # same command used to create an environment can also re-build it!
-conda env create --prefix $PROJECT_DIR/env --file environment.yml --force
+conda env create \
+    --prefix $PROJECT_DIR/env \
+    --file environment.yml \
+    --force
 ```
 ---
 
-@snap[north-east]
+@snap[north-west]
 #### finally, activate the env and create the kernel!
 @snapend
 
@@ -126,7 +136,7 @@ python -m ipykernel install \
 ```
 ---
 
-@snap[north-east]
+@snap[north-west]
 #### Example
 @snapend
 
@@ -134,11 +144,11 @@ INSERT SCREENSHOT FROM JUPYTERLAB HERE!
 
 ---
 
-@snap[north-east]
+@snap[north-west]
 #### `%conda` and `%pip` magic commands
 @snapend
 
-Built-in IPython magic commands for installing packages via *into the active kernel* Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
+Built-in IPython magic commands for installing packages via into the *active* kernel Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
 
 @ul[spaced]
 * Both commands can be used from within Jupyter Notebooks or IPython consoles. 
@@ -148,7 +158,7 @@ Built-in IPython magic commands for installing packages via *into the active ker
 
 ---
 
-@snap[north-east]
+@snap[north-west]
 ### Project-based JupyterLab install
 @snapend
 
@@ -162,8 +172,8 @@ Conda (+Pip) manage separate JupyterLab installations for each project.
 
 ---
 
-@snap[north-east]
-#### Typical `environment.yml` for a "project-based" install
+@snap[north-west]
+#### `environment.yml` for a "project-based" install
 @snapend
 
 ```yaml
@@ -183,24 +193,25 @@ dependencies:
 ```
 ---
 
-@snap[north-east]
-#### Create project environment using Conda
+@snap[north-west]
+#### Automate environment creation with Bash script
 @snapend
-
-Create a Bash script `create-conda-env.sh` to automate environment creation (including JupyterLab re-build).
 
 ```bash
 #!/bin/bash --login
 
 ENV_PREFIX=$PROJECT_DIR/env # env directory included in Python .gitignore
-conda env create --prefix $ENV_PREFIX jupyter-base-env --file environment.yml --force
+conda env create \
+    --prefix $ENV_PREFIX 
+    --file environment.yml \
+    --force
 conda activate $ENV_PREFIX
 source postBuild # put jupyter labextension install commands here
 ```
 
 ---
 
-@snap[north-east]
+@snap[north-west]
 #### Examples
 @snapend
 
@@ -212,14 +223,14 @@ INSERT LINKS TO EXAMPLE REPOS HERE!
 
 ---
 
-@snap[north-east]
+@snap[north-west]
 #### System-wide or project-based: which to choose?
 @snapend
 
 ---
 
-@snap[north-east]
-### Where to find me?
+@snap[north-west]
+### Thanks!
 @snapend
 
 #### Dr. David R. Pugh
