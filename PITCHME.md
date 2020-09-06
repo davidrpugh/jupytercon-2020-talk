@@ -44,19 +44,32 @@ channels:
 dependencies:
   - jupyterlab
   - jupyterlab-git # provides git support
-  - jupyter_conda  # provides Conda environment and package access
+  - nodejs # required for building (some) extensions
   - pip
   - pip:
     - -r file:requirements.txt # extensions available via pip go here
   - python
+  - xeus-python # alt kernel with nice support for debugging
 ```
+
+---
+
+@snap[north-west]
+#### `requirements.txt` for a "system-wide" install
+@snapend
+
+```
+jupyter-lsp
+python-language-server[all]
+```
+
 ---
 
 @snap[north-east]
 #### Keep your `jupyterlab-base-env` *lean*
 @snapend
 
-Environment should *only* contain JupyterLab and required extensions.
+Environment should *only* contain JupyterLab and required extensions (+deps).
 
 @ul[spaced]
 * Automate the process of building `jupyterlab-base-env` with Bash script.
@@ -91,7 +104,7 @@ Custom kernel for a project's Conda environment allows you to launch Jupyter Not
 ---
 
 @snap[north-west]
-#### First, add dependencies to your project;
+#### First, add `ipykernel` to your project;
 @snapend
 
 ```yaml
@@ -105,7 +118,6 @@ channels:
 dependencies:
   ...
   - ipykernel
-  - ipython
   ...
 ```
 ---
