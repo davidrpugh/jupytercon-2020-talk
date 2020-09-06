@@ -7,8 +7,8 @@ JupyterCon 2020
 ![width=250](assets/img/headshot.png)
 
 #### Dr. David R. Pugh
-Staff Scientist, KAUST Visualization Core Lab
-Certified Instructor, The Carpentries
+Staff Scientist, [KAUST Visualization Core Lab](https://corelabs.kaust.edu.sa/labs/detail/visualization-core-lab)
+Certified Instructor, [The Carpentries](https://carpentries.org/)
 
 ---
 
