@@ -16,7 +16,7 @@ Certified Instructor, [The Carpentries](https://carpentries.org/)
 
 @snap[north-west]
 ### Outline
-@snap[end]
+@snapend
 
 @ul[spaced]
 * System-wide JupyterLab installation
