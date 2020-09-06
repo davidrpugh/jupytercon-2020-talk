@@ -21,14 +21,14 @@ Certified Instructor, [The Carpentries](https://carpentries.org/)
 @ul[spaced]
 * "System-wide" JupyterLab installation
 * "Project-based" JupyterLab installation
-* Provide examples of both approaches
+* Provide some "best-practices" for both approaches
 * Discuss the relevant tradeoffs
 @ulend
 
 ---
 
 @snap[north-west]
-### System-wide JupyterLab install
+### "System-wide" JupyterLab install
 @snapend
 
 @snap[west]
@@ -70,7 +70,7 @@ dependencies:
 #### `requirements.txt` for a "system-wide" install
 @snapend
 
-```
+```bash
 jupyter-lsp
 python-language-server[all]
 ```
