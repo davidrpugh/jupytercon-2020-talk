@@ -1,4 +1,4 @@
-### Best practices for managing JupyterLab-based data science projects using Conda (+Pip)
+### Best practices for managing JupyterLab-based data science projects using Conda (+pip)
 
 @snap[south span-100]
 JupyterCon 2020, 12-16 October
@@ -32,7 +32,7 @@ Certified Instructor, [The Carpentries](https://carpentries.org/)
 @snapend
 
 @snap[west]
-Conda (+Pip) manage a JupyterLab installation shared across all projects.
+Conda (+pip) manage a JupyterLab installation shared across all projects.
 
 @ul[spaced]
 * Common set of JupyterLab extensions simplifies user interface (UI) and user experience (UX).
@@ -86,8 +86,8 @@ Environment should *only* contain JupyterLab and required extensions (+deps).
 
 @ul[spaced]
 * Automate environment build with Bash script.
-* Each of your projects should have separate Conda environment.
-* Create custom Jupyter kernels for project Conda environments.
+* Each of your projects should have separate Conda (+pip) environment.
+* Create custom Jupyter kernels for project Conda (+pip) environments.
 @ulend
 @snapend
 
@@ -115,7 +115,7 @@ source postBuild # put jupyter labextension install commands here
 @snapend
 
 @snap[west]
-Allows you to launch Jupyter Notebooks and IPython consoles for different Conda environments within a common JupyterLab installation.
+Allows you to launch Jupyter Notebooks and IPython consoles for different Conda (+pip) environments within a common JupyterLab installation.
 
 @ul[spaced]
 * Can automate process for all Conda envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
@@ -152,7 +152,7 @@ INSERT SCREENSHOT FROM JUPYTERLAB HERE!
 #### `%conda` and `%pip` magic commands
 @snapend
 
-Built-in IPython magic commands for installing packages via into the *active* kernel Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
+Built-in IPython magic commands for installing packages into the *active* kernel via Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
 
 @ul[spaced]
 * Both commands can be used from within Jupyter Notebooks or IPython consoles. 
@@ -166,7 +166,7 @@ Built-in IPython magic commands for installing packages via into the *active* ke
 ### Project-based JupyterLab install
 @snapend
 
-Conda (+Pip) manage separate JupyterLab installations for each project.
+Conda (+pip) manage separate JupyterLab installations for each project.
 
 @ul[spaced]
 * More flexible UI/UX as JupyterLab version and extensions can customized for each project.
@@ -237,9 +237,7 @@ INSERT LINKS TO EXAMPLE REPOS HERE!
 ### Thanks!
 @snapend
 
-#### Dr. David R. Pugh
-Staff Scientist, KAUST Visualization Core Lab
-Certified Instructor, The Carpentries
+![width=250](assets/img/headshot.png)
 
 @snap[south-west text-08]
 @fa[twitter](TheSandyCoder)
