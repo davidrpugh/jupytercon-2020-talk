@@ -152,6 +152,7 @@ INSERT SCREENSHOT FROM JUPYTERLAB HERE!
 ### Project-based JupyterLab install
 @snapend
 
+@snap[west]
 Conda (+pip) manage separate JupyterLab installations for each project.
 
 @ul[spaced]
@@ -159,6 +160,7 @@ Conda (+pip) manage separate JupyterLab installations for each project.
 * Easier experimentation with bleeding edge features of JupyterLab.
 * Automatically makes a data science project repo "Binder-ready". 
 @ulend
+@snapend
 
 ---
 
