@@ -14,6 +14,12 @@ Certified Instructor, The Carpentries
 ### Outline
 @snap[end]
 
+@ul[spaced]
+* System-wide JupyterLab installation
+* Project-based JupyterLab installation
+* Discuss the tradeoffs
+@ulend
+
 ---
 
 @snap[north-west]
@@ -24,7 +30,7 @@ Conda (+Pip) manage a JupyterLab installation shared across all projects.
 
 @ul[spaced]
 * Common set of JupyterLab extensions simplifies user interface (UI) and user experience (UX).
-* No need to frequently re-build JupyterLab
+* No need to frequently re-build JupyterLab.
 * Allows for quicker start of new projects as no need to install (and build!) JupyterLab.
 @ulend
 
@@ -100,7 +106,7 @@ source postBuild # put jupyter labextension install commands here
 @snapend
 
 @snap[west]
-Creating Jupyter kernels for Conda environments allows you to launch Jupyter Notebooks and IPython consoles for each Conda environment within a common JupyterLab installation.
+Allows you to launch Jupyter Notebooks and IPython consoles for different Conda environments within a common JupyterLab installation.
 
 @ul[spaced]
 * Can automate process for all Conda envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
@@ -112,48 +118,17 @@ Creating Jupyter kernels for Conda environments allows you to launch Jupyter Not
 ---
 
 @snap[north-west]
-#### First, add `ipykernel` to your project;
-@snapend
-
-```yaml
-name: null
-
-channels:
-  ...
-  - conda-forge
-  - defaults
-  
-dependencies:
-  ...
-  - ipykernel
-  ...
-```
----
-
-@snap[north-west]
-#### next, rebuild the Conda environment;
+#### How to manually create custom Jupyter kernel
 @snapend
 
 ```bash
-# same command used to create an environment can also re-build it!
-conda env create \
-    --prefix $PROJECT_DIR/env \
-    --file environment.yml \
-    --force
-```
----
-
-@snap[north-west]
-#### finally, activate the env and create the kernel!
-@snapend
-
-```bash
-conda activate $PROJECT_DIR/env
-python -m ipykernel install \
+conda activate $PROJECT_DIR/env # don't forget to activate env first!
+python -m ipykernel install \ # requires ipykernel installed in the env
     --user \
     --name name-for-internal-use-only \
     --display-name "Name you will see in JupyerLab"
 ```
+
 ---
 
 @snap[north-west]
