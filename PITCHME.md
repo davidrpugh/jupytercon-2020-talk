@@ -7,11 +7,18 @@ JupyterCon 2020
 #### Dr. David R. Pugh
 Staff Scientist, KAUST Visualization Core Lab
 Certified Instructor, The Carpentries
-@snapend
 
 ---
 
+@snap[north-east]
+### Outline
+@snap[end]
+
+---
+
+@snap[north-east]
 ### System-wide JupyterLab install
+@snapend
 
 Conda (+Pip) manage a JupyterLab installation shared across all projects.
 
@@ -23,7 +30,9 @@ Conda (+Pip) manage a JupyterLab installation shared across all projects.
 
 ---
 
-#### Typical Conda `environment.yml` for a "system-wide" install
+@snap[north-east]
+#### Typical `environment.yml` for a "system-wide" install
+@snapend
 
 ```yaml
 name: jupyterlab-base-env
@@ -43,9 +52,11 @@ dependencies:
 ```
 ---
 
+@snap[north-east]
 #### Create `jupyterlab-base-env` using Conda
+@snapend
 
-Put the following commands inside a Bash script `create-jupyterlab-env.sh` to automate the process of environment creation (including JupyterLab re-build). See [template repo](INSERT LINK TO GITHUB REPO HERE!) for details.
+Create a Bash script `create-jupyterlab-env.sh` to automate environment creation (including JupyterLab re-build). Full example available on [GitHub](INSERT LINK TO GITHUB REPO HERE!).
 
 ```bash
 #!/bin/bash --login
@@ -57,9 +68,11 @@ source postBuild # put jupyter labextension install commands here
 
 ---
 
+@snap[north-east]
 #### Keep your `jupyterlab-base-env` *lean*
+@snapend
 
-The `jupyterlab-base-env` should *only* contain JupyterLab (+dependencies) and required extensions.
+The `jupyterlab-base-env` should *only* contain JupyterLab and required extensions.
 
 @ul[spaced]
 * Automate the process of building `jupyterlab-base-env` with Bash script.
@@ -69,13 +82,17 @@ The `jupyterlab-base-env` should *only* contain JupyterLab (+dependencies) and r
 
 ---
 
+@snap[north-east]
 #### Create custom kernel for each project's Conda environment
+@snapend
 
-A custom kernel for a project's Conda environment allows you to launch Jupyter Notebooks and IPython consoles for that Conda environment within a common JupyterLab installation.
+Custom kernel for a project's Conda environment allows you to launch Jupyter Notebooks and IPython consoles for that Conda environment within a common JupyterLab installation.
 
 ---
 
+@snap[north-east]
 #### First, add dependencies to your project;
+@snapend
 
 ```yaml
 dependencies:
@@ -86,7 +103,9 @@ dependencies:
 ```
 ---
 
+@snap[north-east]
 #### next, rebuild the Conda environment;
+@snapend
 
 ```bash
 # same command used to create an environment can also re-build it!
@@ -94,7 +113,9 @@ conda env create --prefix $PROJECT_DIR/env --file environment.yml --force
 ```
 ---
 
+@snap[north-east]
 #### finally, activate the env and create the kernel!
+@snapend
 
 ```bash
 conda activate $PROJECT_DIR/env
@@ -105,13 +126,17 @@ python -m ipykernel install \
 ```
 ---
 
+@snap[north-east]
 #### Example
+@snapend
 
 INSERT SCREENSHOT FROM JUPYTERLAB HERE!
 
 ---
 
+@snap[north-east]
 #### `%conda` and `%pip` magic commands
+@snapend
 
 Built-in IPython magic commands for installing packages via *into the active kernel* Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
 
@@ -123,7 +148,9 @@ Built-in IPython magic commands for installing packages via *into the active ker
 
 ---
 
+@snap[north-east]
 ### Project-based JupyterLab install
+@snapend
 
 Conda (+Pip) manage separate JupyterLab installations for each project.
 
@@ -135,7 +162,9 @@ Conda (+Pip) manage separate JupyterLab installations for each project.
 
 ---
 
-#### Typical Conda `environment.yml` for a "project-based" install
+@snap[north-east]
+#### Typical `environment.yml` for a "project-based" install
+@snapend
 
 ```yaml
 name: null
@@ -154,9 +183,11 @@ dependencies:
 ```
 ---
 
+@snap[north-east]
 #### Create project environment using Conda
+@snapend
 
-Put the following commands inside a Bash script `create-conda-env.sh` to automate the process of environment creation (including JupyterLab re-build).
+Create a Bash script `create-conda-env.sh` to automate environment creation (including JupyterLab re-build).
 
 ```bash
 #!/bin/bash --login
@@ -169,20 +200,27 @@ source postBuild # put jupyter labextension install commands here
 
 ---
 
+@snap[north-east]
 #### Examples
+@snapend
 
 INSERT LINKS TO EXAMPLE REPOS HERE!
 
 * Scikit Learn + friends
+* PyTorch + friends
 * NVIDIA RAPIDS + BlazingSQL + Dask
 
 ---
 
+@snap[north-east]
 #### System-wide or project-based: which to choose?
+@snapend
 
 ---
 
+@snap[north-east]
 ### Where to find me?
+@snapend
 
 #### Dr. David R. Pugh
 Staff Scientist, KAUST Visualization Core Lab
