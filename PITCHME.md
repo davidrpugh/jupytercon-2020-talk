@@ -77,10 +77,11 @@ python-language-server[all]
 
 ---
 
-@snap[north-east]
+@snap[north-west]
 #### Keep your `jupyterlab-base-env` *lean*
 @snapend
 
+@snap[west]
 Environment should *only* contain JupyterLab and required extensions (+deps).
 
 @ul[spaced]
@@ -88,6 +89,7 @@ Environment should *only* contain JupyterLab and required extensions (+deps).
 * Each of your projects should have separate Conda environment.
 * Create custom Jupyter kernels for project Conda environments.
 @ulend
+@snapend
 
 ---
 
