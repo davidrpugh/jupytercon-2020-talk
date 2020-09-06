@@ -149,22 +149,6 @@ INSERT SCREENSHOT FROM JUPYTERLAB HERE!
 ---
 
 @snap[north-west]
-#### `%conda` and `%pip` magic commands
-@snapend
-
-@snap[west]
-Built-in IPython magic commands for installing packages into the *active* kernel via Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
-
-@ul[spaced]
-* Both commands can be used from within Jupyter Notebooks or IPython consoles. 
-* Both `%conda` and `%pip` are mostly useful for proto-typing new projects.
-* For "production", prefer adding new packages to `environment.yml`/`requirements.txt` (and rebuilding environment).
-@ulend
-@snapend
-
----
-
-@snap[north-west]
 ### Project-based JupyterLab install
 @snapend
 
@@ -226,6 +210,22 @@ INSERT LINKS TO EXAMPLE REPOS HERE!
 * Scikit Learn + friends
 * PyTorch + friends
 * NVIDIA RAPIDS + BlazingSQL + Dask
+
+---
+
+@snap[north-west]
+#### `%conda` and `%pip` magic commands
+@snapend
+
+@snap[west]
+Built-in IPython magic commands for installing packages into the *active* kernel via Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
+
+@ul[spaced]
+* Both commands can be used from within Jupyter Notebooks or IPython consoles. 
+* Both `%conda` and `%pip` are mostly useful for proto-typing new projects.
+* For "production", prefer adding new packages to `environment.yml`/`requirements.txt` (and rebuilding environment).
+@ulend
+@snapend
 
 ---
 
