@@ -1,0 +1,15 @@
+name: jupyterlab-base-env
+
+channels:
+  - conda-forge
+  - defaults
+  
+dependencies:
+  - jupyterlab
+  - jupyterlab-git # provides git support
+  - nodejs
+  - pip
+  - pip:
+    - -r file:requirements.txt
+  - python
+  - xeus-python
