@@ -31,6 +31,7 @@ Certified Instructor, [The Carpentries](https://carpentries.org/)
 ### System-wide JupyterLab install
 @snapend
 
+@snap[west]
 Conda (+Pip) manage a JupyterLab installation shared across all projects.
 
 @ul[spaced]
@@ -38,6 +39,7 @@ Conda (+Pip) manage a JupyterLab installation shared across all projects.
 * No need to frequently re-build JupyterLab.
 * Allows for quicker start of new projects as no need to install (and build!) JupyterLab.
 @ulend
+@snapend
 
 ---
 
