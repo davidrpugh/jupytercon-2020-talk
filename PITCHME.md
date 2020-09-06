@@ -119,7 +119,7 @@ Allows you to launch Jupyter Notebooks and IPython consoles for different Conda 
 
 @ul[spaced]
 * Can automate process for all Conda (+pip) envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
-* Can manually create custom Jupyter kernel for more fine-grained control.
+* Can manually create custom Jupyter kernel for particular Conda (+pip) envs.
 @ulend
 
 @snapend
