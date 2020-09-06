@@ -1,4 +1,4 @@
-### Best practices for managing Jupyter-based data science projects using Conda (+Pip)
+### Best practices for managing JupyterLab-based data science projects using Conda (+Pip)
 
 JupyterCon 2020
 
@@ -11,9 +11,9 @@ Certified Instructor, The Carpentries
 
 ---
 
-### System-wide Jupyter install
+### System-wide JupyterLab install
 
-Conda (+Pip) manage a Jupyter installation shared across all projects.
+Conda (+Pip) manage a JupyterLab installation shared across all projects.
 
 * Common set of JupyterLab extensions simplifies user interface (UI) and user experience (UX).
 * No need to frequently re-build JupyterLab
@@ -24,7 +24,7 @@ Conda (+Pip) manage a Jupyter installation shared across all projects.
 #### Typical Conda `environment.yml` for a "system-wide" install
 
 ```yaml
-name: jupyter-base-env
+name: jupyterlab-base-env
 
 channels:
   - conda-forge
@@ -41,25 +41,25 @@ dependencies:
 ```
 ---
 
-#### Create `jupyter-base-env` using Conda
+#### Create `jupyterlab-base-env` using Conda
 
-Put the following commands inside a Bash script `create-jupyter-env.sh` to automate the process of environment creation (including JupyterLab re-build). See [template repo](INSERT LINK TO GITHUB REPO HERE!) for details.
+Put the following commands inside a Bash script `create-jupyterlab-env.sh` to automate the process of environment creation (including JupyterLab re-build). See [template repo](INSERT LINK TO GITHUB REPO HERE!) for details.
 
 ```bash
 #!/bin/bash --login
 
-conda env create --name jupyter-base-env --file environment.yml --force
-conda activate jupyter-base-env
+conda env create --name jupyterlab-base-env --file environment.yml --force
+conda activate jupyterlab-base-env
 source postBuild # put jupyter labextension install commands here
 ```
 
 ---
 
-#### Keep your `jupyter-base-env` *lean*
+#### Keep your `jupyterlab-base-env` *lean*
 
-The `jupyter-base-env` should *only* contain Jupyter (+dependencies) and required extensions.
+The `jupyterlab-base-env` should *only* contain JupyterLab (+dependencies) and required extensions.
 
-* Automate the process of building `jupyter-base-env` with Bash script.
+* Automate the process of building `jupyterlab-base-env` with Bash script.
 * Each of your projects should have separate Conda environment.
 * Create custom kernel for each project's Conda environment.
 
@@ -117,9 +117,9 @@ Built-in IPython magic commands for installing packages via *into the active ker
 
 ---
 
-### Project-based Jupyter install
+### Project-based JupyterLab install
 
-Conda (+Pip) manage separate Jupyter installations for each project.
+Conda (+Pip) manage separate JupyterLab installations for each project.
 
 * More flexible UI/UX as JupyterLab version and extensions can customized for each project.
 * Easier experimentation with bleeding edge features of JupyterLab.
