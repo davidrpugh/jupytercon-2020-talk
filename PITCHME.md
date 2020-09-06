@@ -100,13 +100,14 @@ source postBuild # put jupyter labextension install commands here
 @snapend
 
 @snap[west]
-Custom Jupyter kernel for a Conda environment allows you to launch Jupyter Notebooks and IPython consoles for that Conda environment within a common JupyterLab installation.
-@snapend
+Creating Jupyter kernels for Conda environments allows you to launch Jupyter Notebooks and IPython consoles for each Conda environment within a common JupyterLab installation.
 
 @ul[spaced]
-* Automate process for all envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
-* Manually create custom kernel for more fine-grained control.
+* Can automate process for all Conda envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
+* Can manually create custom Jupyter kernel for more fine-grained control.
 @ulend
+
+@snapend
 
 ---
 
