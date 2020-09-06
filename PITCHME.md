@@ -14,6 +14,12 @@ Certified Instructor, The Carpentries
 ### Outline
 @snap[end]
 
+@ul[spaced]
+* System-wide JupyterLab installation
+* Project-based JupyterLab installation
+* Discuss the tradeoffs
+@ulend
+
 ---
 
 @snap[north-west]
@@ -24,7 +30,7 @@ Conda (+Pip) manage a JupyterLab installation shared across all projects.
 
 @ul[spaced]
 * Common set of JupyterLab extensions simplifies user interface (UI) and user experience (UX).
-* No need to frequently re-build JupyterLab
+* No need to frequently re-build JupyterLab.
 * Allows for quicker start of new projects as no need to install (and build!) JupyterLab.
 @ulend
 
@@ -44,38 +50,51 @@ channels:
 dependencies:
   - jupyterlab
   - jupyterlab-git # provides git support
-  - jupyter_conda  # provides Conda environment and package access
+  - nodejs # required for building (some) extensions
   - pip
   - pip:
     - -r file:requirements.txt # extensions available via pip go here
   - python
 ```
+
+---
+
+@snap[north-west]
+#### `requirements.txt` for a "system-wide" install
+@snapend
+
+```
+jupyter-lsp
+python-language-server[all]
+```
+
 ---
 
 @snap[north-east]
 #### Keep your `jupyterlab-base-env` *lean*
 @snapend
 
-Environment should *only* contain JupyterLab and required extensions.
+Environment should *only* contain JupyterLab and required extensions (+deps).
 
 @ul[spaced]
-* Automate the process of building `jupyterlab-base-env` with Bash script.
+* Automate environment build with Bash script.
 * Each of your projects should have separate Conda environment.
-* Create custom kernel for each project's Conda environment.
+* Create custom Jupyter kernels for project Conda environments.
 @ulend
 
 ---
 
 @snap[north-west]
-#### Automate building `jupyterlab-base-env` with Bash script
+#### Automate environment build with Bash script
 @snapend
-
-Full example available on [GitHub](INSERT LINK TO GITHUB REPO HERE!).
 
 ```bash
 #!/bin/bash --login
 
-conda env create --name jupyterlab-base-env --file environment.yml --force
+conda env create \
+    --name jupyterlab-base-env \
+    --file environment.yml \
+    --force
 conda activate jupyterlab-base-env
 source postBuild # put jupyter labextension install commands here
 ```
@@ -83,57 +102,33 @@ source postBuild # put jupyter labextension install commands here
 ---
 
 @snap[north-west]
-#### Create custom kernels for project Conda environments
+#### Creating Jupyter kernels for Conda environments
 @snapend
 
-Custom kernel for a project's Conda environment allows you to launch Jupyter Notebooks and IPython consoles for that Conda environment within a common JupyterLab installation.
+@snap[west]
+Allows you to launch Jupyter Notebooks and IPython consoles for different Conda environments within a common JupyterLab installation.
+
+@ul[spaced]
+* Can automate process for all Conda envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
+* Can manually create custom Jupyter kernel for more fine-grained control.
+@ulend
+
+@snapend
 
 ---
 
 @snap[north-west]
-#### First, add dependencies to your project;
-@snapend
-
-```yaml
-name: null
-
-channels:
-  ...
-  - conda-forge
-  - defaults
-  
-dependencies:
-  ...
-  - ipykernel
-  - ipython
-  ...
-```
----
-
-@snap[north-west]
-#### next, rebuild the Conda environment;
+#### How to manually create custom Jupyter kernel
 @snapend
 
 ```bash
-# same command used to create an environment can also re-build it!
-conda env create \
-    --prefix $PROJECT_DIR/env \
-    --file environment.yml \
-    --force
-```
----
-
-@snap[north-west]
-#### finally, activate the env and create the kernel!
-@snapend
-
-```bash
-conda activate $PROJECT_DIR/env
-python -m ipykernel install \
+conda activate $PROJECT_DIR/env # don't forget to activate env first!
+python -m ipykernel install \ # requires ipykernel installed in the env
     --user \
     --name name-for-internal-use-only \
     --display-name "Name you will see in JupyerLab"
 ```
+
 ---
 
 @snap[north-west]
