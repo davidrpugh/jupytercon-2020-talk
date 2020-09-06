@@ -118,7 +118,7 @@ source postBuild # put jupyter labextension install commands here
 Allows you to launch Jupyter Notebooks and IPython consoles for different Conda (+pip) environments within a common JupyterLab installation.
 
 @ul[spaced]
-* Can automate process for all Conda envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
+* Can automate process for all Conda (+pip) envs using [`jupyter-conda`](https://github.com/fcollonval/jupyter_conda) extension.
 * Can manually create custom Jupyter kernel for more fine-grained control.
 @ulend
 
