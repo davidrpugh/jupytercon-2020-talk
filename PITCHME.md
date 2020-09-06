@@ -232,7 +232,7 @@ Built-in IPython magic commands for installing packages into the *active* kernel
 ---
 
 @snap[north-west]
-#### "System-wide" or "project-based": which to choose?
+#### "System-wide" or "project-based"?
 @snapend
 
 @ul[spaced]
