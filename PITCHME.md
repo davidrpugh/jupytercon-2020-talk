@@ -204,14 +204,14 @@ source postBuild # put jupyter labextension install commands here
 ---
 
 @snap[north-west]
-#### Examples
+#### Examples of "project-based" JupyterLab installs
 @snapend
 
-INSERT LINKS TO EXAMPLE REPOS HERE!
+DONT FORGET TO ADD LINKS!
 
-* Scikit Learn + friends
-* PyTorch + friends
-* NVIDIA RAPIDS + BlazingSQL + Dask
+* [Scikit Learn + friends]()
+* [PyTorch + friends]()
+* [NVIDIA RAPIDS + BlazingSQL + Dask]()
 
 ---
 
@@ -232,8 +232,14 @@ Built-in IPython magic commands for installing packages into the *active* kernel
 ---
 
 @snap[north-west]
-#### System-wide or project-based: which to choose?
+#### "System-wide" or "project-based": which to choose?
 @snapend
+
+@ul[spaced]
+* Prefer "project-based" for its greater flexibility with minimal additional overhead. 
+* Prefer "project-based" if only some of your projects use GPUs. 
+* Prefer "system-wide" when all projects use a common set of extensions.
+@ulend
 
 ---
 
