@@ -207,11 +207,9 @@ source postBuild # put jupyter labextension install commands here
 #### Examples of "project-based" JupyterLab installs
 @snapend
 
-DONT FORGET TO ADD LINKS!
-
-* [Scikit Learn + friends]()
-* [PyTorch + friends]()
-* [NVIDIA RAPIDS + BlazingSQL + Dask]()
+* [Scikit Learn + friends](https://github.com/davidrpugh/jupytercon-2020-talk/tree/scikit-learn-env)
+* [PyTorch + friends](https://github.com/davidrpugh/jupytercon-2020-talk/tree/pytorch-env)
+* [NVIDIA RAPIDS + BlazingSQL + Dask](https://github.com/davidrpugh/jupytercon-2020-talk/tree/nvidia-rapids-env)
 
 ---
 
