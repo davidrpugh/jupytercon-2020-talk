@@ -1,4 +1,5 @@
-[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/davidrpugh/jupytercon-2020-talk/master?grs=github)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/davidrpugh/jupytercon-2020-talk/jupyterlab-base-env)
 
-# jupytercon-2020-talk
-Repository of materials for my JupyterCon 2020 talk
+# "System-wide" JupyterLab environment 
+
+Contains typical configuration files for a "system-wide" JupyterLab installation.
