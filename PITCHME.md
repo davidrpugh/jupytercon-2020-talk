@@ -179,6 +179,7 @@ channels:
 dependencies:
   - jupyterlab
   - jupyterlab-git # extensions available via conda go here
+  - nodejs
   - pip
   - pip:
     - -r file:requirements.txt # packages available via pip go here
