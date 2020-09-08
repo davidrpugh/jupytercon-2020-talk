@@ -1,4 +1,5 @@
 #!/bin/bash --login
+set -e
 
 # create the conda environment
 export ENV_PREFIX=$PWD/env
