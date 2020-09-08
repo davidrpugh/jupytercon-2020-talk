@@ -99,6 +99,7 @@ Environment should *only* contain JupyterLab and required extensions (+deps).
 
 ```bash
 #!/bin/bash --login
+set -e
 
 conda env create \
     --name jupyterlab-base-env \
@@ -191,6 +192,7 @@ dependencies:
 
 ```bash
 #!/bin/bash --login
+set -e
 
 export ENV_PREFIX=$PROJECT_DIR/env # directory included in Python .gitignore
 conda env create \
