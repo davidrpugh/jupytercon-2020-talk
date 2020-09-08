@@ -1,4 +1,5 @@
-[![GitPitch](https://gitpitch.com/assets/badge.svg)](https://gitpitch.com/davidrpugh/jupytercon-2020-talk/master?grs=github)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/davidrpugh/jupytercon-2020-talk/scikit-learn-env)
 
-# jupytercon-2020-talk
-Repository of materials for my JupyterCon 2020 talk
+# JupyterLab + Scikit-Learn + Dask (and friends!)
+
+Contains configuration files for a JupyterLab-based data science project using [Scikit-learn](https://scikit-learn.org/stable/index.html) and [Dask](https://dask.org/).
