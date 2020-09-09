@@ -28,7 +28,7 @@ Certified Instructor, [The Carpentries](https://carpentries.org/)
 ---
 
 @snap[north-west]
-### "System-wide" JupyterLab install
+### "System-wide" JupyterLab
 @snapend
 
 @snap[west]
