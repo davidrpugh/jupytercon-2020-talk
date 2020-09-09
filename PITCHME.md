@@ -21,7 +21,7 @@ Certified Instructor, [The Carpentries](https://carpentries.org/)
 @ul[spaced]
 * "System-wide" JupyterLab installation
 * "Project-based" JupyterLab installation
-* Provide some "best-practices" for both approaches
+* Provide some "best-practices"
 * Discuss the relevant tradeoffs
 @ulend
 
