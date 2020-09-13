@@ -1,3 +1,2 @@
 jupyter-lsp
 python-language-server[all]
-xeus-python
