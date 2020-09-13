@@ -62,6 +62,7 @@ dependencies:
   - pip:
     - -r file:requirements.txt # extensions available via pip go here
   - python
+  - xeus-python
 ```
 
 ---
