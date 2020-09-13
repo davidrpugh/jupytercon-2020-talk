@@ -135,7 +135,7 @@ Allows you to launch Jupyter Notebooks and IPython consoles for different Conda 
 conda activate $PROJECT_DIR/env # don't forget to activate env first!
 python -m ipykernel install \ # requires ipykernel installed in the env
     --user \
-    --name name-for-internal-use-only \
+    --name $PROJECT_NAME-kernel \ # for internal use only!
     --display-name "Name you will see in JupyerLab"
 ```
 
@@ -145,12 +145,28 @@ python -m ipykernel install \ # requires ipykernel installed in the env
 #### Example
 @snapend
 
-INSERT SCREENSHOT FROM JUPYTERLAB HERE!
+![IMAGE](assets/img/jupyterlab-screenshot.png)
 
 ---
 
 @snap[north-west]
-### Project-based JupyterLab install
+#### `%conda` and `%pip` magic commands
+@snapend
+
+@snap[west]
+Built-in IPython magic commands for installing packages into the *active* kernel via Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
+
+@ul[spaced]
+* Both commands can be used from within Jupyter Notebooks or IPython consoles. 
+* Both `%conda` and `%pip` are mostly useful for prototyping new projects.
+* For "production", prefer adding new packages to `environment.yml`/`requirements.txt` (and rebuilding environment).
+@ulend
+@snapend
+
+---
+
+@snap[north-west]
+### "Project-based" JupyterLab install
 @snapend
 
 @snap[west]
@@ -180,10 +196,12 @@ dependencies:
   - jupyterlab
   - jupyterlab-git # extensions available via conda go here
   - nodejs
+  - pandas
   - pip
   - pip:
     - -r file:requirements.txt # packages available via pip go here
   - python
+  - scikit-learn
 ```
 ---
 
@@ -195,7 +213,7 @@ dependencies:
 #!/bin/bash --login
 set -e
 
-export ENV_PREFIX=$PROJECT_DIR/env # directory included in Python .gitignore
+export ENV_PREFIX=$PROJECT_DIR/env # directory included in .gitignore
 conda env create \
     --prefix $ENV_PREFIX 
     --file environment.yml \
@@ -210,25 +228,9 @@ source postBuild # put jupyter labextension install commands here
 #### Examples of "project-based" JupyterLab installs
 @snapend
 
-* [Scikit Learn + friends](https://github.com/davidrpugh/jupytercon-2020-talk/tree/scikit-learn-env)
-* [PyTorch + friends](https://github.com/davidrpugh/jupytercon-2020-talk/tree/pytorch-env)
-* [NVIDIA RAPIDS + BlazingSQL + Dask](https://github.com/davidrpugh/jupytercon-2020-talk/tree/nvidia-rapids-env)
-
----
-
-@snap[north-west]
-#### `%conda` and `%pip` magic commands
-@snapend
-
-@snap[west]
-Built-in IPython magic commands for installing packages into the *active* kernel via Conda ([`%conda`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-conda)) or Pip ([`%pip`](https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-pip)).
-
-@ul[spaced]
-* Both commands can be used from within Jupyter Notebooks or IPython consoles. 
-* Both `%conda` and `%pip` are mostly useful for proto-typing new projects.
-* For "production", prefer adding new packages to `environment.yml`/`requirements.txt` (and rebuilding environment).
-@ulend
-@snapend
+* [JupyterLab + Scikit Learn + friends](https://github.com/davidrpugh/jupytercon-2020-talk/tree/scikit-learn-env)
+* [JupyterLab + PyTorch + friends](https://github.com/davidrpugh/jupytercon-2020-talk/tree/pytorch-env)
+* [JupyterLab + NVIDIA RAPIDS + BlazingSQL + Dask](https://github.com/davidrpugh/jupytercon-2020-talk/tree/nvidia-rapids-env)
 
 ---
 
