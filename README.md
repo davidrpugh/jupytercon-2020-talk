@@ -1,6 +1,6 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/davidrpugh/jupytercon-2020-talk/nvidia-rapids-env)
 
-# JupyterLab + NVIDIA RAPIDS + BlazingSQL + Dask (and friends!)
+# JupyterLab + NVIDIA RAPIDS + BlazingSQL + Dask
 
 Contains configuration files for a JupyterLab-based data science project using [NVIDIA RAPIDS](https://rapids.ai/), 
 [BlazingSQL](https://www.blazingsql.com/), and [Dask](https://dask.org/). You can explore the JupyterLab UI/UX via 
