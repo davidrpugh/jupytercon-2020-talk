@@ -36,8 +36,8 @@ Conda (+pip) manage a JupyterLab installation shared across all projects.
 
 @ul[spaced]
 * Common set of JupyterLab extensions simplifies user interface (UI) and user experience (UX).
-* No need to frequently re-build JupyterLab.
 * Allows for quicker start of new projects as no need to install (and build!) JupyterLab.
+* Easy low-level configuration of JupyterLab via files inside the `~/.jupyter` directory in your user home directory.
 @ulend
 @snapend
 
