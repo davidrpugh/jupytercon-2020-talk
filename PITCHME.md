@@ -167,7 +167,7 @@ Built-in IPython magic commands for installing packages into the *active* kernel
 ---
 
 @snap[north-west]
-### "Project-based" JupyterLab install
+### "Project-based" JupyterLab
 @snapend
 
 @snap[west]
