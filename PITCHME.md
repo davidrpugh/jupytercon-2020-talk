@@ -68,26 +68,15 @@ dependencies:
 ---
 
 @snap[north-west]
-#### `requirements.txt` for a "system-wide" install
-@snapend
-
-```bash
-jupyter-lsp
-python-language-server[all]
-```
-
----
-
-@snap[north-west]
-#### Keep your `jupyterlab-base-env` *lean*
+#### "System-wide" JupyterLab best practices
 @snapend
 
 @snap[west]
-Environment should *only* contain JupyterLab and required extensions (+deps).
+[`jupyterlab-base-env`](https://github.com/davidrpugh/jupytercon-2020-talk/tree/jupyterlab-base-env) should *only* contain JupyterLab and required extensions (+deps).
 
 @ul[spaced]
 * Automate environment build with Bash script.
-* Each of your projects should have separate Conda (+pip) environment.
+* Projects should have separate Conda (+pip) environments.
 * Create custom Jupyter kernels for project Conda (+pip) environments.
 @ulend
 @snapend
@@ -137,7 +126,7 @@ conda activate $PROJECT_DIR/env # don't forget to activate env first!
 python -m ipykernel install \ # requires ipykernel installed in the env
     --user \
     --name $PROJECT_NAME-kernel \ # for internal use only!
-    --display-name "Name you will see in JupyerLab"
+    --display-name "Name you will see in JupyterLab"
 ```
 
 ---
@@ -196,8 +185,8 @@ channels:
 dependencies:
   - jupyterlab
   - jupyterlab-git # extensions available via conda go here
-  - nodejs
-  - pandas
+  - nodejs # required for building (some) extensions
+  - pandas # now project deps go here!
   - pip
   - pip:
     - -r file:requirements.txt # packages available via pip go here
@@ -252,6 +241,8 @@ source postBuild # put jupyter labextension install commands here
 @snapend
 
 ![width=250](assets/img/headshot.png)
+
+https://github.com/davidrpugh/jupytercon-2020-talk
 
 @snap[south-west text-08]
 @fa[twitter](TheSandyCoder)
