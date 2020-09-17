@@ -97,6 +97,15 @@ source postBuild # put jupyter labextension install commands here
 
 ---
 
+
+@snap[north-west]
+#### Example
+@snapend
+
+https://github.com/davidrpugh/jupytercon-2020-talk/tree/jupyterlab-base-env
+
+---
+
 @snap[north-west]
 #### Creating Jupyter kernels for Conda environments
 @snapend
